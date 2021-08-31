@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% comment %} <link rel="stylesheet" href="{% static 'shop/css/style2.css' %}">  {% endcomment %}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Каталог</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbarr navbar-expand-lg navbar-dark border shadow-md rounded d-flex">
+            <div class="container cnt">
+                <div class=" cmnt">
+                    <a class="brand" href="header2.html">
+                        <img class="imgl" src="img/logo2.jpg" alt="">
+                    </a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link icon nav-linak" href="header2.html">
+
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-linak" href="katalog.html">
+                                    Каталог
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-linak" href="logo.html">
+                                    Регистрация
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-linak" href="voiti.html">
+                                    Войти
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="formin">
+                    <form class="search d-flex">
+                        <input title="Найти..." class="inp-sear" type="text" placeholder="Найти...">
+                        
+                        <div class="svg">
+                            <a href="">
+                                <svg style="background-color: #ffc0cbf7;
+                        width: 44px;
+                        height: 23px;
+                        border: none;
+                        border-radius: 30px;   
+                        margin-top: 6px;
+                       " xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                    <path fill="#000" fill-rule="evenodd"
+                                        d="M12.026 10.626L16 14.6 14.6 16l-3.974-3.974a5.5 5.5 0 1 1 1.4-1.4zM7.5 11.1a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z">
+                                    </path>
+
+                                </svg>
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="">
+            <div class="containerrr">
+            
+                <section class="">
+                    <div class="katalog border rounded-lg shadow-md">
+                        <div class="parket">
+                            <a href="#">Каталог товаров</a>
+                        </div>
+
+                        <div class="menu">
+                       {% for category in categories %}
+                            <a title="Перейти" class="menua" href="{{ category.url }}">
+                                <div class="pod-menu october">
+                                    {% comment %} <img class="kat-img" src="https://ostopload/iblock/dc5/ic_cell_phone.png" alt=""> {% endcomment %}
+                                    <p>
+                                        {% comment %} Чехлы {% endcomment %}
+                                    {{ category.name }}  
+                                    </p>
+                                </div>
+                            </a>
+                                {% endfor %} 
+                            {% comment %} <a title="Перейти" class="menua" href="chexol.html">
+                                <div class="pod-menu october">
+                                    <img class="kat-img" src="https://ostopload/iblock/dc5/ic_cell_phone.png" alt="">
+                                    <p>Головные уборы</p>
+                                </div>
+                            </a>
+                            <a title="Перейти" class="menua" href="chexol.html">
+                                <div class="pod-menu october">
+                                    <img class="kat-img" src="https://ostopload/iblock/dc5/ic_cell_phone.png" alt="">
+                                    <p>Футболки</p>
+                                </div>
+                            </a>
+                            <a title="Перейти" class="menua" href="chexol.html">
+                                <div class="pod-menu october">
+                                    <img class="kat-img" src="https://ostopload/iblock/dc5/ic_cell_phone.png" alt="">
+                                    <p>Свитшоты </p>
+                                </div>
+                            </a>
+                            <a title="Перейти" class="menua" href="chexol.html">
+                                <div class="pod-menu october">
+                                    <img class="kat-img" src="https://ostopload/iblock/dc5/ic_cell_phone.png" alt="">
+                                    <p>Толстовки </p>
+                                </div>
+                            </a>
+                            <a title="Перейти" class="menua" href="chexol.html">
+                                <div class="pod-menu october">
+                                    <img class="kat-img" src="https://ostopload/iblock/dc5/ic_cell_phone.png" alt="">
+                                    <p>Обувь</p>
+                                </div>
+                            </a> {% endcomment %}
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            
+        </div>
+         
+        <div class="container1 container">
+        {% block content %}
+            <section class="section1">
+                <div data-aos="fade-up"
+                                        data-aos-anchor-placement="top-bottom">
+
+                <h2 class="sec-h">Новинки</h2>
+                <div class="tovar">
+
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div title="О товаре" class="pod-tovar cart">
+                            <a href="">
+                                <img class="img" src="img/image1.jpg" alt="">
+                            </a>
+                            <p class="pod">
+                                <a class="a name" href="">Товар</a>
+                                <br>
+                                <a class="p cost" href="">3 000c</a>
+
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                </div>
+            </section>
+            {% endblock content %}
+        
+        </div>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery-3.6.0.min (1).js"></script> -->
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
